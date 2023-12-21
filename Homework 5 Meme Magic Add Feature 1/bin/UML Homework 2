@@ -1,0 +1,102 @@
+User
+--------------
+-userName: String
+-memesCreated: ArrayList<Meme> 
+-memesViewed: ArrayList<Meme>
+-----------------------------
++ rateMeme(meme : Meme, rating : int) : void
++ createMeme(backgroundImage : BackgroundImage, caption : String) : Meme
++ deleteMeme(meme : Meme) : boolean
++ shareMeme(meme : Meme, feed : Feed) : void
++ rateNextMemeFromFeed(feed : Feed, ratingScore : int) : void
++ calculateReputation : double
++ toString : String
++ equals(object : Object) : boolean
++getUserName() : String
++getMemesCreated() : ArrayList<Meme>
++getMemesViewed() : ArrayList<Meme>
++setUserName() : void
++setMemesCreated(memesCreated : ArrayList<Meme>) : void
++setMemesViewed(memesViewed : ArrayList<Meme>) : void
+
+
+
+
+BackgroundImage
+--------------
+-imageFileName: String
+-title: String
+-description: String
+----------------------------
++toString() : String
++equals(object : Object) : boolean
++getImageFileName() : String
++getTitle() : String
++getDescription() : String
++setImageFileName(imageFileName : String) : void
++setTitle(title : String) : void
++setDescription(description : String) : void
+
+
+
+
+
+
+
+
+Meme
+-------------------
+- creator : User
+- backgroundImage : BackgroundImage
+- ratings: Rating[]
+- caption : String
+- captionVerticalAlign : String
+- shared: boolean
+
+--------------------
++addRating(rating : Rating) : boolean
++calculateOverallRating() : double
++toString() : String
++equals(object : Object) : boolean
++getRatings() : Rating[]
++setRatings(ratings : Rating[]) : void
++getCreater() : User
++setCreator(creator : User): void
++getBackgroundImage() : BackgroundImage
++setBackgroundImage(backgroundImage : BackgroundImage) : void
++getCaption() : String
++setCaption(caption : String): void
++getCaptionVerticalAlign() : String
++setCaptionVerticalAlign(captionVerticalAlign : String): void
++getShared() : boolean
++setShared(shared : Boolean) : void
+
+
+
+Rating
+-----------------
+-score: int
+-user: User
+---------------------
++toString(): String
++equals(object: Object): boolean
++getScore(): int
++getUser(): User
++setScore(score : int): void
++setUser(user : User): void
+
+
+
+
+
+
+
+
+Feed
+----------------
+-memes: ArrayList <meme>
+------------------------
++getNewMeme(user: User): Meme
++ toString() : String
++getMemes() : ArrayList<Meme>
++setMemes(memes : ArrayList<Meme>) : Void
